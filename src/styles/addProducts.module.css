@@ -1,0 +1,240 @@
+.wrapper{
+    position : fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    overflow-y: scroll;
+    width: 100%;
+    margin-bottom: .2rem;
+    z-index: 999;
+    background-color: #d1d1d16e;
+}
+[data-close]{
+    position: absolute;
+    cursor: pointer;
+    right: 1rem;
+    top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1000;
+}
+.mainContainer{
+    position : absolute;
+    background-color: white;
+    max-width: 90rem;
+    width: 96%;
+    top: 16%;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    border-radius: 0.5rem;
+    z-index: 999;
+    padding: 1rem;
+    box-shadow: 0 0 24px rgba(24, 24, 24, 0.233);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+.mainContainer h1{
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 1rem 0;position: relative;
+}
+.mainContainer h1::before , .mainContainer h1::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 36%;
+    height: 1px;
+    background-color: var(--active-color);
+    transform: translateY(-50%);
+    z-index: 999;
+}
+.mainContainer h1::before{
+    left: 0;
+}
+.mainContainer h1::after{
+    right: 0;
+}
+.subContainer{
+    display: flex;
+    flex-basis: auto;
+    flex-wrap: wrap;
+}
+.subContainer > div{
+    width: 50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.tripMainImg , .tripSubImgs{
+    position: relative;
+    min-height: 6rem;
+    border: 1px dashed rgba(189, 189, 189, 0.445);
+    margin: 1rem 0;
+}
+.fileInputContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 1;
+    width: 12rem;
+    height: 3rem;
+    z-index: 200;
+    cursor: pointer;
+    bottom: 0%;
+    left: 0;
+    background-color: var(--active-color);
+    color: white;
+    font-weight: bold;
+}
+.fileInputSubContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    height: 2.5rem;
+    z-index: 200;
+    cursor: pointer;
+    bottom: -37%;
+    left: 0;
+    background-color: rgb(230, 230, 230);
+    color: var(--active-color);
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+}
+label{
+    position: relative;
+}
+.fileInput{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tripExtraDetails{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(14rem , 1fr));
+    gap: 1rem;
+}
+.tripExtraDetails , .tripTitle , .tripDescription{
+    padding: 0 0.5rem ;
+}
+.tripExtraDetails > div , .tripTitle , .tripDescription{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    position: relative;
+}
+.tripDescription > textarea{
+    line-height: 1.5;
+    min-height: 4rem;
+    min-width: 100%;
+    max-height: 7rem;
+}
+.tripExtraDetails > div > input , .tripTitle > input, .tripDescription > textarea , .tripType select
+{
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 14px #00000024;
+    max-width: 100%;
+}
+.starsContainer{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+}
+.tripPrice > span{
+    position: absolute;
+    right: 1rem;
+    top: 67%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--active-color);
+}
+.showMainImg{
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    min-height: 12rem;
+}
+.showMainImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.showsubImgs{
+    display: flex;
+    gap: 0.5rem;
+}
+.subImgContainer{
+    flex-shrink: 0;
+    width : 7rem;
+    height : 7rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    position: relative;
+}
+.subImgContainer > span{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.1rem;
+    transform: translate(-50%);
+    cursor: pointer;
+
+}
+.subImgContainer > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.tripExtraDetails > div > input:focus
+{
+    box-shadow: 0 0 14px #db3b3524;
+}
+.noImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+    color: rgb(185, 185, 185);
+    letter-spacing: 0.2rem;
+}
+[data-addproduct]{
+    position: sticky;
+    bottom: 0;
+    z-index: 201;
+    width: 100%;
+    background-color: var(--active-color);
+    color: white;
+    font-weight: bold;
+    padding: 1rem 0;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 992px){
+    .subContainer{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .subContainer > div{
+        width: 100%;
+    }
+    .mainContainer h1::before, .mainContainer h1::after{
+        width: 18%;
+    }
+
+}

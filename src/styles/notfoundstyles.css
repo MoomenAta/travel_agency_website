@@ -1,0 +1,55 @@
+.notfound-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.notfound-container img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.notfound-container .overlay{
+    z-index: -1;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 14, 14, 0.264);
+}
+.notfound-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.notfound-content h1{
+    font-size: 6rem;
+    display: flex;
+    gap: 0.8rem;
+    color: white;
+    padding-bottom: 0rem;
+    border-bottom: 1px solid white;
+}
+.notfound-content h2{
+    margin: 2rem 0;
+    font-size: 10rem;
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-fill-color: none;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.2rem;
+}
+.notfound-content button{
+    background-color: var(--active-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 3px;
+    cursor : pointer;
+}

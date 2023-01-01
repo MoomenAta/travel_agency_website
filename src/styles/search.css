@@ -1,0 +1,294 @@
+.search-sec-1-container{
+    position: relative;
+    height: 40rem;
+}
+.absolute-img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.search-sec-1-container::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.205);
+}
+.search-sec-1-container .content-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    
+}
+.content-container h1{
+    font-size: 5rem;
+    width: fit-content;
+}
+.content-container h1 span:last-child{
+    font-size: 5.2rem;
+    -webkit-text-fill-color: #f0f8ff00;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    letter-spacing: -0.4rem;
+    padding-bottom: 1rem;
+}
+
+.content-container .search-input{
+    position: relative;
+    width: 90%;
+    margin: 2rem;
+}
+.content-container{
+    display: flex;
+    align-items: center;
+}
+.content-container .search-input input{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+.content-container .search-input button{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    height: 100%;
+    background-color: var(--active-color);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+    font-size: 1rem;
+}
+.content-container .input-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.search-btn{
+    cursor: pointer;
+    margin: 0.5rem;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 21px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border: 1px solid white;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 500ms ease-in-out;
+}
+.search-active-btn{
+    color: black;
+    background-color: white;
+}
+@media screen and (max-width : 768px){
+    .search-sec-1-container{
+        height: 45rem;
+    }
+    .search-sec-1-container .content-container{
+        width: 100%;
+        transform: translate(-50%,-50%) !important;
+    }
+    .content-container h1{
+        width: 100%;
+        font-size: 3rem;
+        display: block;
+        text-align: center;
+    }
+    .content-container h1 span:last-child{
+        font-size: 3.2rem;
+    }
+    .search-input{
+        min-height: 4rem;
+    }
+    .content-container .search-input button{
+        padding: 1rem;
+        max-height: 2.5rem;
+        min-width: 9rem;
+        line-height: 0;
+        font-size: 0.8rem;
+        top: 3.5rem;
+        right: 50%;
+        transform: translateX(50%);
+
+    }
+    .content-container .input-buttons{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+} 
+
+/************************************************************ SECTION 2 **************/
+.sec-container{
+    padding: 4rem 0;
+}
+
+.route-container{
+    padding: 0 0.5rem;
+    margin-left: 15%;
+}
+.route-header{
+    max-width: 90rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-text{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-route-name{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.see-all-btn{
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    background-color: var(--active-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.routes-components-container{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    scroll-snap-type : x mandatory;
+}
+.routes-components-container > * {
+    scroll-snap-align: start;
+}
+@media screen and (max-width : 1024px){
+    .route-container{
+        margin-left: 2%;
+    }
+}
+@media screen and (max-width : 768px){
+    .route-header{
+        grid-template-columns: 1fr;
+    }
+    .header-text{
+        width: 100%;
+    }
+    .header-text h1{
+        font-size: 1.5rem;
+    }
+    .see-all-btn{
+        padding: 0.5rem 2rem;
+    }
+    .route-header > div:last-child{
+        margin-top: 0.5rem;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .routes-components-container{
+        margin-left: 0;
+        padding: 2rem 0;
+        scroll-snap-type : x mandatory;
+        gap: unset;
+    }
+    .routes-components-container > * {
+        scroll-snap-align: start;
+        margin: 0 1rem;
+    }
+    .routes-components-container > div {
+        max-width: 16rem;
+    }
+    .routes-components-container > a{
+        flex-shrink: 0;
+        width: 100%;
+    }
+}
+
+/****************************************************** SEC6  ***************************/
+.discover-photo-container{
+    position: relative;
+}
+.discover-photo{
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem;
+}
+.discover-photo-container img{
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+}
+.discover-photo-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.head-text{
+    text-align: center;
+}
+.discover-photo-content .head-text h1{
+    font-size: 3rem;
+    color:white
+}
+.discover-photo-content .head-text h3{
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color:rgb(163 163 163)
+}
+.discover-photo-content p {
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+}
+.discover-photo-content button{
+    padding: 0.8rem 3rem;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    background-color: var(--active-color);
+    margin: 1rem 0;
+}
+@media screen and (max-width : 768px){
+    .route-header > div{
+        padding-right: 0;
+    }
+    .discover-photo{
+        padding: 1rem;
+    }
+    .discover-photo-container p {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    .sec-container{
+        padding: 2rem 0;
+    }
+}

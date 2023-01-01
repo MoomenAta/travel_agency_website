@@ -1,0 +1,280 @@
+.shipTripContainer{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.imgContainer{
+    width: 50%;
+    height: 50rem;
+    position: relative;
+    flex-shrink: 0;
+}
+.imgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 30px 30px 0;
+}
+.imgContainer span{
+    position: absolute;
+    bottom: 0;
+    right: 10rem;
+    width: 10rem;
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+}
+.infoContainer{
+    width: 50%;
+    flex-shrink: 0;
+    padding: 2rem 4rem;
+}
+.infoContainer > h1{
+    font-size: 2rem;
+}
+.tripDates{
+    margin: 1rem 0;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+.tripDates .line{
+    height: 2rem;
+    width: 1px;
+    background-color: black;
+}
+.tripDates div h4{
+    margin-bottom: 0.5rem;
+}
+.tripDates div p{
+    font-weight: bold;
+}
+.tripDates div p span:nth-of-type(2){
+    margin-left: 1rem;
+}
+.part{
+    margin: 2rem 0;
+}
+.part > h2{
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+}
+.part > h2 span{
+    color: var(--active-color);
+}
+.shipPlacesInfo{
+    margin: 1rem 0;
+}
+.placesInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.placesInfo h2 span{
+    color: var(--active-color);
+}
+
+/* SHIP STYLES*/
+.shipLook{
+    border: 1px solid black;
+    padding: 1rem 10%;
+    margin: 1rem;
+    border-radius: 10rem;
+    width: 100%;
+}
+.shipLookAllGrid{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.shipColumn{
+    display: grid;
+    grid-template-rows: repeat(5 , 1fr);
+    gap: 0.5rem;
+    width: fit-content;
+    height: 7rem;
+    align-items: center;
+}
+.shipGridAndRow{
+    width: 100%;
+}
+.shipGrid{
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    gap: 0.5rem;
+    height: 7rem;
+    align-items: center;
+    place-items: center;
+}
+.shipRow{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    align-items: center;
+    place-items: center;
+}
+.shipRow span{
+    width: 1rem;
+    text-align: center;
+}
+.placePoint{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgb(214, 214, 214);
+}
+/* SHIP STYLE END*/
+.yourDataInfo{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    margin: 1rem 0;
+    column-gap: 1rem;
+}
+.yourDataInfo div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.yourDataInfo div > label{
+    font-weight: 500;
+}
+.yourDataInfo div > input{
+    padding: 1rem 1rem;
+    border-radius: 4rem;
+    outline: none;
+    border: 0.5px solid rgb(224, 224, 224);
+}
+.yourDataInfo div > input:focus{
+    border: none;
+    box-shadow: inset 1px 1px 4px rgb(253, 232, 232);
+}
+.priceAndButton{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.priceContainer > p {
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+.priceContainer > p > span{
+    font-size: 1.5rem;
+    color: var(--active-color);
+}
+.priceContainer > p > span:first-child{
+    color: var(--active-color);
+}
+.priceAndButton button{
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    background-color: var(--active-color);
+    cursor: pointer;
+}
+@media screen and (max-width : 1500px) {
+    .infoContainer{
+        padding: 2rem;
+    }
+    .partsContainer{
+        display: flex;
+        gap: 2%;
+    }
+    .part{
+        flex-shrink: 0;
+        width: 50%;
+    }
+    .shipLookAllGrid{
+        flex-direction: column;
+    }
+    .shipLook{
+        max-width: 16rem;
+        padding: 5rem 1% 2rem;
+        min-height: 44rem;
+        margin: 1rem auto;
+    }
+    .shipColumn{
+        grid-template-columns: repeat(5 , 1fr);
+        grid-template-rows : unset;
+        width: 100%;
+        place-items: center;
+        height : 1rem;
+        padding-left: 10%;
+    }
+    .shipGridAndRow{
+        display: flex;
+    }
+    .shipGrid{
+        grid-template-columns: repeat(5,1fr);
+        height: 100%;
+        order: 2;
+        width: 90%;
+    }
+    .shipRow{
+        grid-template-rows: repeat(20,1fr);
+        grid-template-columns: unset;
+        order: 1;
+        width: 10%;
+        padding-top: 0;
+    }
+    .yourDataInfo{
+        grid-template-columns: 1fr;
+    }
+    .priceAndButton{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .priceAndButton > *{
+        width: 100%;
+    }
+}
+@media screen and (max-width : 992px) {
+    .placesInfo{
+        width: 88%;
+        margin: 0 auto;
+    }
+    .imgContainer{
+        height: 22rem;
+    }
+    .shipTripContainer{
+        padding-inline: 1rem ;
+    }
+    .imgContainer , .infoContainer{
+        flex: 1 1 100%;
+    }
+}
+@media screen and (max-width : 600px) {
+    .imgContainer{
+        height: 16rem;
+    }
+    .imgContainer span{
+        width: 5rem;
+        font-size: 3rem;
+    }
+    .partsContainer{
+        flex-direction: column;
+    }
+    .part{
+        width: 100%;
+    }
+    .infoContainer{
+        padding: 0.5rem;
+    }
+    .tripDates{
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+    }
+}

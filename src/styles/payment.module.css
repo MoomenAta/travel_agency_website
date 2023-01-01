@@ -1,0 +1,187 @@
+.container{
+    padding: 6rem 1rem;
+    max-width: 90rem;
+    width : 100%;
+    margin: 0 auto;
+}
+.tripDetails{
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+    margin : 2rem 0;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding-bottom: 2rem;
+}
+.tripImage{
+    flex-basis: 24rem;
+    flex-grow: 1;
+    max-height: 14rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.tripImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tripInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    flex-grow: 1;
+}
+.namePrice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.namePrice p {
+    font-weight: bold;
+    color: var(--active-color);
+}
+
+.locationInfo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.locationInfo > div{
+    padding: 0.5rem;
+    border: 1px solid var(--active-color);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.priceTag{
+    padding: 1rem 0;
+    position: relative;
+}
+.priceTag p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.priceTag p span{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    color: var(--active-color);
+}
+.paymentFormContainer{
+    padding: 1rem 0;
+}
+.title{
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+.paymentForm{
+    display: grid;
+    gap: 1rem;
+}
+.cardsTypes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1rem;
+}
+.cardsTypes > p{
+    flex-basis: 10rem;
+    flex-grow: 1;
+    padding: 1rem 0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+.visa{
+    background-color: rgb(33, 87, 235);
+}
+.mc{
+    background-color: rgb(241, 161, 41);
+}
+.pp{
+    background-color: rgb(51, 105, 255);
+}
+.cardNumbers{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(10rem , 1fr));
+    gap: 2rem;
+}
+.cardNumbers > div{
+    position: relative;
+}
+
+.cardNumbers > div > input + label{
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 500ms all ease-in-out;
+    opacity: 0;
+}
+.cardNumber input , .cvvNumber input{
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border-radius: 0.3rem;
+    border: 0.5px solid rgb(221, 221, 221);
+}
+.cardNumber input:focus + Label , .cvvNumber input:focus + Label ,
+.cardNumber input:not(:placeholder-shown) + Label , .cvvNumber input:not(:placeholder-shown) + Label{
+    top: 0rem;
+    z-index: 0;
+    background-color: white;
+    opacity: 1;
+}
+.expireDate{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(10rem , 1fr));
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+.expireDate label{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.date{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.date input{
+    padding: 1rem 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    min-width: 40%;
+    box-shadow: inset 0px 0px 2px #00000070;
+    outline: none;
+    text-align: center;
+}
+.date input:focus{
+    box-shadow: inset 0px 0px 4px rgba(234, 45, 70, 0.486);
+}
+.paymentForm > button{
+    padding: 1rem 0;
+    border: none;
+    background-color: var(--active-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width : 768px) {
+    .namePrice{
+        gap: 1rem;
+        font-size: 1.5rem;
+    }
+    
+}

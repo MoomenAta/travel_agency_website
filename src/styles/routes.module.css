@@ -1,0 +1,374 @@
+.routesSection{
+    padding-top: 8rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.leftSideWrapper{
+    margin: 0 2rem;
+}
+.searchContainer{
+    padding: 1.5rem;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.171);
+}
+.searchRow1{
+    padding: 1rem 0;
+    border-bottom: 1px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.location{
+    width : 100%;
+    display: flex;
+    flex-direction : column;
+    padding-right: 1rem;
+    border-right: 0.5px solid rgb(226, 226, 226);
+}
+.location label{
+    font-weight : bold;
+}
+.searchLocationInput{
+    position: relative;
+    width: 100%;
+}
+.searchLocationInput > span{
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+}
+.searchLocationInput input{
+    width: 100%;
+    padding: 0.8rem 0.5rem 0.8rem 2.5rem;
+    border-radius: 2.5rem;
+    border: 0.5px solid rgb(204, 204, 204);
+    margin: 0.5rem 0;
+}
+.searchLocationInput input:focus{
+    outline: none;
+    box-shadow: inset 0 0 4px rgba(255, 208, 207, 0.747);
+}
+
+.arrivalDepartureButtonContainer{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    padding: 0 0.5rem;
+    gap: 1rem;
+    align-items: center;
+}
+.arrivalDepartureButtonContainer > button , .arrivalDepartureButtonContainer input{
+    cursor: pointer;
+}
+.arrivalDepartureButtonContainer > div{
+    width: 100%;
+}
+.arrivalDepartureButtonContainer > div > span{
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+.arrivalDepartureButtonContainer > div > span > input{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 2.5rem;
+    border: 0.5px solid rgb(204, 204, 204);
+}
+.arrivalDepartureButtonContainer button {
+    height: 2.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--active-color);
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.searchRow2{
+    padding: 1rem 0;
+    display: flex;
+    gap: 1rem;
+}
+.searchRow2 > div:not(:last-child){
+    padding-right: 2rem;
+    border-right: 1px solid rgb(228, 228, 228);
+}
+.numOfRoomsInput{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.numOfRoomsInput > span:not(:nth-of-type(2)){
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--active-color);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 16px rgba(27, 27, 27, 0.164);
+    cursor : pointer;
+}
+.numOfRoomsInput > span:nth-of-type(2){
+    width: 4rem;
+    outline: none;
+    border: 0.5px solid rgb(228, 228, 228);
+    padding: 0.3rem;
+    text-align: center;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 0.2rem;
+}
+
+.personsContainer{
+    display: flex;
+    margin-top: 1rem;
+}
+.personsContainer > span{
+    cursor: pointer;
+}
+.hotelClass{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.hotelClass>div{
+    padding: 0.2rem 0.7rem;
+    height: 2rem;
+    gap: 0.2rem;
+    border-radius: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(224, 224, 224);
+    cursor: pointer;
+}
+.hotelClass > div> span{
+    font-weight: bold;
+    line-height: 0;
+}
+
+.searchRow3{
+    margin-top: 2rem;
+}
+.priceLine{
+    position: relative;
+    height: 4rem;
+}
+input[type="range"]
+{
+    appearance: none;
+    width: 100%;
+    border-radius: 3px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 1.4rem;
+    background-color: unset;
+}
+input[type="range"]::-webkit-slider-thumb
+{
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: all;
+    z-index: 5;
+    border-radius: 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255, 206, 206, 0);
+}
+input[type="range"]::-moz-range-thumb
+{
+    cursor: pointer;
+    -moz-appearance: none;
+    appearance: none;
+    pointer-events: auto;
+    z-index: 5;
+    border-radius: 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255, 206, 206, 0);
+}
+
+.lineMain , .lineRange{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    height: 8px;
+}
+.line{
+    height: 9px;
+    width: 100%;
+    background-color: #ea2d4636;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.lineRange{
+    background-color: var(--active-color);
+    right: 25%;
+    left: 25%;
+}
+.price{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    gap:0.2rem;
+}
+/* .priceLeft{
+    left: 25%;
+}
+.priceRight{
+    right: 25%;
+} */
+.pricePoint{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--active-color);
+    position: relative;
+    border: 0.3rem solid white;
+}
+.priceTag{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.allRoutes{
+    margin-top: 3rem;
+}
+.routesSubNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    margin: 1rem 0;
+}
+.routesSubNav ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(199, 199, 199);
+}
+.routesSubNav ul li{
+    padding: 1rem 0;
+    cursor: pointer;
+}
+.activeState{
+    color: var(--active-color);
+    border-bottom: 4px solid var(--active-color);
+    position: relative;
+}
+/* .activeState::before{
+    position: absolute;
+    content: '';
+    bottom: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--active-color);
+} */
+.routesComponentsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(410px , 1fr));
+    padding: 2rem 0;
+    gap: 2rem;
+    width: 100%;
+}
+.routesComponentsContainer > a > div{
+    width: 100% !important;
+}
+.showIcons{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.showIcons span{
+    cursor: pointer;
+}
+
+
+.mapImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width : 1024px){
+    .showIcons{
+        display: none;
+    }
+    .routesSection{
+        grid-template-columns: 1fr;
+    }
+    .leftSideWrapper{
+        order: 2;
+        margin: unset;
+    }
+    .rightSideWrapper{
+        max-height: 30rem;
+        margin-bottom: 1rem;
+    }
+    .searchContainer{
+        padding: 0.2rem;
+    }
+    .searchRow1{
+        grid-template-columns: 1fr;
+    }
+    .arrivalDepartureButtonContainer{
+        grid-template-columns: repeat(auto-fit , minmax(260px , 1fr));
+    }
+    .searchRow2 , .hotelClass{
+        flex-wrap: wrap;
+    }
+    .searchRow2{
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(260px ,1fr));
+    }
+    .searchRow2 > div{
+        width: 100%;
+    }
+    .searchRow2 > div > div{
+        justify-content: space-around;
+    }
+    .location{
+        padding: 0 0.5rem;
+    }
+    .searchRow3{
+        padding: 1rem;
+    }
+    .routesComponentsContainer{
+        grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+        padding: 2rem 1rem;
+    }
+    .routesSubNav ul{
+        overflow-x: scroll;
+        font-size : 0.8rem;
+        gap: 0.5rem;
+        padding-inline: 1rem;
+    }
+    .routesSubNav ul > li{
+        flex-shrink: 0;
+    }
+}
+

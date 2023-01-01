@@ -1,0 +1,139 @@
+.wrapper{
+    min-height : 30rem;
+    position : relative;
+}
+.aboutusHeading{
+    width: 100%;
+    height : 30rem;
+    overflow: hidden;
+    position: relative;
+}
+.aboutusHeading img{
+    height: 100%;
+    width : 100%;
+    object-fit: cover;
+}
+.aboutusHeading h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 4rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+.aboutusHeading h1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 8px;
+    width: 60%;
+    background-color: var(--active-color);
+    border-radius: 4rem;
+}
+
+.aboutusSec2{
+    padding: 6rem 0 0;
+}
+.aboutusSec2Container{
+    max-width: 90rem;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+.ourStoryPart1{
+    width: 30%;
+}
+.ourStoryPart1 h1{
+    font-size: 3rem;
+    color: var(--active-color);
+    position: relative;
+    padding-top: 2rem;
+}
+.ourStoryPart1 h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 0.2rem;
+    background-color: var(--active-color);
+}
+.ourStoryPart1 p{
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.ourStoryPart2{
+    width: 60%;
+}
+.ourStoryPart2 p{
+    line-height: 1.5rem;
+
+}
+
+.aboutusSec3{
+    padding : 6rem 0;
+}
+.aboutusSec3Heading{
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+}
+.testominalsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(12rem , 1fr));
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+.testo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding : 1rem;
+}
+.testo > p{
+    text-align: center;
+    line-height: 1.2;
+}
+.testominalWriter{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.testominalWriter img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testominalWriterInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+@media screen and (max-width : 768px){
+    .aboutusSec2Container{
+        flex-direction: column;
+        padding: 0 0rem;
+        gap: 2rem;
+    }
+    .aboutusSec2Container > div {
+        width: 100%;
+    }
+    .aboutusSec2 , .aboutusSec3{
+        padding: 2rem 0 0;
+    }
+    .aboutusSec3Heading{
+        font-size: 2.5rem;
+    }
+    .testominalsContainer{
+        gap : 1rem;
+    }
+}
+

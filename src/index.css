@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --active-color : #ea2d46;
+  --black-color : #0f0e13;
+  --nav-li-color : white;
+}
+* , *::before , *::after{
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+html{
+  font-size:14px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+.diff-font{
+  font-style: italic;
+  font-family: 'Norican';
+  color: var(--active-color);
+  position: relative;
+  z-index: 2;
+}
+.active-route li{
+  border-bottom: 1px solid var(--active-color);
+}
+
+@keyframes scroll-icon-animation {
+  0%{
+      bottom: -0.4rem;
+      opacity: 0.6;
+  }
+  50%{
+      bottom: 0;
+      opacity: 1;
+  }
+  100%{
+      bottom: -0.4rem;
+      opacity: 0.6;
+  }
+}
+
+@keyframes slide-up {
+  0%{
+      bottom : -5rem;
+      opacity: 0.1;
+  }
+  100%{
+      bottom : 0;
+      opacity: 1;
+  }
+}
+
+@keyframes slide-up-down {
+  from{
+      top: -50px;
+  }
+  to{
+      top: 0px;
+  }
+}
+.btn-top{
+  animation: slide-up-down 500ms ease-in-out 1 forwards;
+}
+.active{
+  border-bottom: 3px solid var(--active-color);
+  color: black;
+  transition: all 250ms ease-in-out;
+}
+
+.active-controllers{
+  background-color: var(--active-color) !important;
+}
+.active-controllers svg path {
+  fill: white;
+  stroke: white !important;
+  stroke-width: 2px;
+}
+.media-active{
+  color: var(--black-color) !important;
+}
+.mouse-icon{
+  display: flex;
+  mask: url(/public/icons/mouseScroll.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--active-color);
+}
+.search-icon{
+  display: flex;
+  mask: url(/public/icons/search.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+.prev-icon{
+  display: flex;
+  mask: url(/public/icons/prev.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--active-color);
+  mask-size: 100%;
+}
+.close-icon{
+  display: flex;
+  mask: url(/public/icons/close.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--active-color);
+  mask-size: 100%;
+}
+.next-icon{
+  display: flex;
+  mask: url(/public/icons/next.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--active-color);
+  mask-size: 100%;
+}
+.star-icon{
+  display: flex;
+  background-image: url(/public/icons/star.svg);
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+.starIconMask{
+  display: flex;
+  mask: url(/public/icons/star.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  mask-size: 100%;
+  background-color: rgb(180, 180, 180);
+}
+.starIconHighlighted{
+  background-color: gold;
+}
+.location-icon{
+  display: flex;
+  mask: url(/public/icons/location.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 2rem;
+  height: 2rem;
+  mask-size: 100%;
+  background-color: var(--active-color);
+}
+.date-icon{
+  display: flex;
+  mask: url(/public/icons/date.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--active-color);
+}
+.plane-icon{
+  display: flex;
+  mask: url(/public/icons/plane.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  mask-size: 100%;
+  background-color: var(--active-color);
+}
+.person-icon{
+  display: flex;
+  mask: url(/public/icons/person.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  mask-size: 100%;
+  mask-size: 100%;
+  background-color: rgb(197, 197, 197);
+}
+.activePersonIcon{
+  background-color: var(--active-color) !important;
+}
+.activeStarIcon{
+  border: 1px solid var(--active-color) !important;
+}
+.room-icon{
+  display: flex;
+  mask: url(/public/icons/room.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  mask-size: 100%;
+  background-color: var(--active-color);
+}
+.heart-icon{
+  display: flex;
+  mask: url(/public/icons/heart.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  mask-size: 100%;
+  background-color: var(--active-color);
+}
+.camera-icon{
+  display: flex;
+  mask: url(/public/icons/camera.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1.3rem;
+  height: 1.2rem;
+  mask-size: 100%;
+  background-color: white;
+}
+.edit-icon{
+  display: flex;
+  mask: url(/public/icons/edit.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  mask-size: 100%;
+  background-color: var(--active-color);
+}
+.email-icon{
+  display: flex;
+  mask: url(/public/icons/email.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  mask-size: 100%;
+  background-color: var(--active-color);
+}
+.phone-icon{
+  display: flex;
+  mask: url(/public/icons/phone.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  mask-size: 100%;
+  background-color: var(--active-color);
+}
+.shrink-icon{
+  display: flex;
+  mask: url(/public/icons/shrink.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  mask-size: 100%;
+  background-color: rgb(190, 190, 190);
+}
+.expand-icon{
+  display: flex;
+  mask: url(/public/icons/expaand.svg) 100% 100% no-repeat;
+  background-position: 50%;
+  width: 1rem;
+  height: 1rem;
+  mask-size: 100%;
+  background-color: rgb(190, 190, 190);
+}
+.activeExpandState{
+  background-color: var(--active-color);
+}
+
+.slideUpDiv{
+  animation: slideUpDiv 1.4s ease-in-out 0.6s forwards;
+}
+.showExpandableList{
+  display : flex !important;
+}
+.activeListItem{
+background-color: rgb(241, 241, 241);
+color: rgb(13, 209, 13);
+}
+.expandComponents{
+  grid-template-columns: 1fr !important;
+}
+.collapseIcon{
+  font-size: 1.6rem;
+  color: var(--active-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+.collapseSec{
+  scale: 1 1 !important;
+  max-height: 20rem !important;
+}
+.expandAll{
+  max-height: 40rem !important;
+}
+.invalid{
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: -1rem;
+  color: red;
+}
+.alert{
+  font-size: 0.7rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  margin: 0 0.5rem;
+}
+.disableBtn{
+  background-color: rgb(226, 226, 226) !important;
+  color : rgb(131, 131, 131) !important;
+}
+.highZIndex{
+  z-index: 999 !important;
+}
+
+@keyframes slideUpDiv {
+  0%{
+    opacity: 0;
+    bottom: -14rem;
+    transform: scaleY(1.4);
+    transform-origin: top;
+  }
+  25%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    bottom: 0;
+    transform: scaleY(1);
+  }
+}
+
+@media screen and (max-width:629px){
+  :root{
+    --nav-li-color : white !important;
+  }
+}

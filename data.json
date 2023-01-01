@@ -1,0 +1,164 @@
+{
+    "routes": {
+        "tourismSavage" :[
+            {
+                "tabelId" : 1,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ],
+        "hitchHiking" :[
+            {
+                "tabelId" : 2,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ],
+        "camping" :[
+            {
+                "tabelId" : 3,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ],
+        "carTravel" :[
+            {
+                "tabelId" : 4,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ],
+        "wildTrips" :[
+            {
+                "tabelId" : 5,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ],
+        "hotels" :[
+            {
+                "tabelId" : 6,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ],
+        "airTickets" :[
+            {
+                "tabelId" : 7,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ],
+        "lastMinutesDeals" :[
+            {
+                "tabelId" : 8,
+                "tripType" :"",
+                "img" :"",
+                "secondaryImgs" :[],
+                "name" :"",
+                "description" :"",
+                "star" :"",
+                "price" :"",
+                "rate" : "",
+                "adate" : "",
+                "ddate" : "",
+                "atime" : "",
+                "dtime" : "",
+                "ticketsAvailable" : "",
+                "airLine" : "",
+                "dfrom" : ""
+            }
+        ]
+    }
+}
