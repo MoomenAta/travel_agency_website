@@ -51,7 +51,7 @@ export default function TourComponent({name , rowId , description , img , price 
     return (
         <div className={styles.tourComponentContainer}>
             <div style={{cursor : 'pointer'}} onClick={()=> navigate(`/trip/${rowId}`)} className={styles.tourImg}>
-                <LazyLoadImage src={`https://travelagency7.infinityfreeapp.com/travelWebsite/api/upload/imgs/${img}`} alt={`${img}`} width={500} height={500} />
+                <LazyLoadImage src={`${process.env.REACT_APP_API_LINK}/upload/imgs/${img}`} alt={`${img}`} width={500} height={500} />
                 
             </div>
             <div className={styles.tourInfo}>

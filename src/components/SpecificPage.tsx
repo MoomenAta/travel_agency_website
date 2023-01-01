@@ -19,7 +19,7 @@ export function Flighttrip( {trip , reservedTrip} : {trip:trip , reservedTrip : 
   let [mainImg , setMainImg] = useState<string>(img);
   let [imgs , setImgs] = useState<string[]>(JSON.parse(`${secondaryImg}`));
   let [openNotification , setON] = useState<boolean>(false);
-  let success : boolean = false;
+  let success : boolean = true;
 
   async function bookNow(){
     if(reservedTrip){
