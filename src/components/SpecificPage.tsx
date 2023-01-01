@@ -16,9 +16,10 @@ export function Flighttrip( {trip , reservedTrip} : {trip:trip , reservedTrip : 
   let loggedIn  = useAppSelector( (state : RootState) => state.login);
   let toReserve  = useAppSelector( (state : RootState) => state.toReserve)
   let dispatch = useAppDispatch()
-  let imgs : string[] = JSON.parse(`${secondaryImg}`);
-  let [openNotification , setON] = useState<boolean>(true);
-  let success : boolean = true;
+  let [mainImg , setMainImg] = useState<string>(img);
+  let [imgs , setImgs] = useState<string[]>(JSON.parse(`${secondaryImg}`));
+  let [openNotification , setON] = useState<boolean>(false);
+  let success : boolean = false;
 
   async function bookNow(){
     if(reservedTrip){
@@ -39,17 +40,23 @@ export function Flighttrip( {trip , reservedTrip} : {trip:trip , reservedTrip : 
       alert('You must login to continue')
     }
   }
-  function makeMain(){
-
+  function makeMain(img : string , i:number){
+    let mappedArray = imgs.map((img , idx) => {
+      if(i === idx){
+      return img = mainImg; 
+      }
+      return img});
+    setImgs(mappedArray);
+    setMainImg(img)
   }
 return(
   <section className='specificPage-container'>
       <div className='sp-elementImages'>
         <div className='sp-elementImage'>
-          <img src={`${process.env.REACT_APP_API_LINK}/upload/imgs/${img}`} alt='img-element' />
+          <img src={`${process.env.REACT_APP_API_LINK}/upload/imgs/${mainImg}`} alt='img-element' />
         </div>
         <div className='sp-allImages'>
-          {imgs.map((img , i) => {return <img key={i} onClick={()=>makeMain()} src={`${process.env.REACT_APP_API_LINK}/upload/imgs/${img}`} alt='img-element' /> })}
+          {imgs.map((img , i) => {return <img key={i} onClick={()=>makeMain(img , i)} src={`${process.env.REACT_APP_API_LINK}/upload/imgs/${img}`} alt='img-element' /> })}
         </div>
       </div>
       <div className='sp-contentContainer'>
@@ -90,7 +97,7 @@ return(
         </div>
         <div className='other-routes'>
           <div className='popular-routes'>
-          <img src='/imgs/mountain.webp' alt='pop-img' />
+          <img src='/imgs/mountain.jpg' alt='pop-img' />
             <div className='popular-routes-info'>
               <h1>POPULAR ROUTES</h1>
               <div className='pop-location'>
@@ -100,7 +107,7 @@ return(
             </div>
           </div>
           <div className='popular-routes'>
-            <img src='/imgs/mountain.webp' alt='pop-img' />
+            <img src='/imgs/mountain.jpg' alt='pop-img' />
             <div className='popular-routes-info'>
               <h1>POPULAR ROUTES</h1>
               <div className='pop-location'>

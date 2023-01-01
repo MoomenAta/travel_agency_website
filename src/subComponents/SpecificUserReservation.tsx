@@ -27,7 +27,7 @@ export const SUReservation = ({ idx , deleteReservation , booking } : SUReservat
     <>
         <div className={styles2.reservation}>
             <div className={styles2.imgPart}>
-                <img src={` https://travelagency7.infinityfreeapp.com/travelWebsite/apiupload/imgs/${booking.img}`} alt='reserved trip' />
+                <img src={` https://travelagency7.infinityfreeapp.com/travelWebsite/api/upload/imgs/${booking.img}`} alt='reserved trip' />
             </div>
             <div className={styles2.reservationInfo}>
                 <div className={styles2.tripInfo}>
